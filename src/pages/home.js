@@ -10,4 +10,7 @@ const view = `
             
     </div>
 `;
+return view;
     }
+
+export default Home;
