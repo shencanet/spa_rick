@@ -1,4 +1,8 @@
-const Home = () => {
+import getData from '../utils/getData';
+
+
+const Home = async () => {
+  const characters = await getData();
   const view = `
     <div class="Characters">
       <article class="Character-item">
