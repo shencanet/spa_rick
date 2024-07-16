@@ -1,25 +1,25 @@
-const path =  require ( 'path' );
-const HtmlWebpackPlugin =  require ( 'html-webpack-plugin' );
-const  CopyWebpackPlugin  =  require ( 'copy-webpack-plugin' );
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry:  './src/index.js' ,
+    entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname,  'dist' ),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'main.js'
     },
 
     resolve: {
-        extensions: [ '.js' ],
+        extensions: ['.js'],
     },
 
     module: {
         rules: [
             {
-                test:  /\.js$/ ,
-                exclude:  /node_modules/ ,
+                test: /\.js$/,
+                exclude: /node_modules/,
                 use: {
-                    loader:  'babel-loader' ,
+                    loader: 'babel-loader',
                 }
             }
         ]
@@ -27,17 +27,15 @@ module.exports = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            inject:  true ,
-            template:  './public/index.html' ,
-            filename:  './index.html' 
+            inject: true,
+            template: './public/index.html',
+            filename: './index.html'
         }),
-        new CopyWebpackPlugin([{
-            from:  './src/styles/styles.css' ,
-            to:  ''
-        }]),
-
-
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: './src/styles/styles.css', to: '' }
+            ]
+        })
     ]
 };
-
 
