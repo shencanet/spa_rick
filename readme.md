@@ -94,6 +94,6 @@ Si deseas contribuir a esta API, por favor sigue los siguientes pasos:
 
 Contacto
 
-Si tienes alguna pregunta o sugerencia, por favor contacta al mantenedor del proyecto a través de email@example.com.
+Si tienes alguna pregunta o sugerencia, por favor contacta al mantenedor del proyecto a través de mail_falso@google.com.
 
 ¡Gracias por usar la API de Rick and Morty!
